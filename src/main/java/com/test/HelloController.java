@@ -14,29 +14,27 @@ public class HelloController {
 	public String test() throws ClassNotFoundException {
 
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-		
-		String connectionUrl =
-                "jdbc:sqlserver://yourserver.database.windows.net:1433;"
-                        + "database=AdventureWorks;"
-                        + "user=yourusername@yourserver;;"
-                        + "password=***;"
-                        + "encrypt=true;"
-                        + "trustServerCertificate=false;"
-                        + "loginTimeout=30;";
 
-        try (Connection connection = DriverManager.getConnection(connectionUrl);) {
-            // Code here.
-        	
-        	return "Working!";
-        }
-        // Handle any errors that may have occurred.
-        catch (SQLException e) {
-            e.printStackTrace();
-        }
-        
-        return "Not working";
-		
-	
+		String connectionUrl =
+				"jdbc:sqlserver://yourserver.database.windows.net:1433;"
+						+ "database=AdventureWorks;"
+						+ "user=yourusername@yourserver;;"
+						+ "password=***;"
+						+ "encrypt=true;"
+						+ "trustServerCertificate=false;"
+						+ "loginTimeout=30;";
+
+		try (Connection connection = DriverManager.getConnection(connectionUrl);) {
+			// Code here.
+			return "Working!";
+		}
+		// Handle any errors that may have occurred.
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return "Not working";
+
 	}
-	
+
 }
