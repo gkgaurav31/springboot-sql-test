@@ -1,4 +1,4 @@
-### Sample Spring Boot app to connect to SQL Database 
+# Sample Spring Boot app to connect to SQL Database 
 
 ## Steps:
 - Update HelloController.java with the database credentials
